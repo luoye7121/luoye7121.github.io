@@ -5,19 +5,19 @@
   
 
   
-  <title>Vue2.0 | Hexo</title>
+  <title>vue-router2.0 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vue ??1?this.$emit(“dataA”,showA)??">
+  <meta name="description" content="###动画123456###需要下载animated.css文件并引入###命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)&amp;lt;transition enter-active-class=&amp;quot;animated zoomInLeft&amp;quot; leave-active-class=&amp;apos;animated zoomOu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue2.0">
+<meta property="og:title" content="vue-router2.0">
 <meta property="og:url" content="http://yoursite.com/2018/06/07/Vue2-0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="vue ??1?this.$emit(“dataA”,showA)??">
+<meta property="og:description" content="###动画123456###需要下载animated.css文件并引入###命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)&amp;lt;transition enter-active-class=&amp;quot;animated zoomInLeft&amp;quot; leave-active-class=&amp;apos;animated zoomOu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-07T09:37:21.263Z">
+<meta property="og:updated_time" content="2018-06-08T02:34:35.380Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue2.0">
-<meta name="twitter:description" content="vue ??1?this.$emit(“dataA”,showA)??">
+<meta name="twitter:title" content="vue-router2.0">
+<meta name="twitter:description" content="###动画123456###需要下载animated.css文件并引入###命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)&amp;lt;transition enter-active-class=&amp;quot;animated zoomInLeft&amp;quot; leave-active-class=&amp;apos;animated zoomOu">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Vue2.0
+      vue-router2.0
     </h1>
   
 
@@ -86,12 +86,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>vue ??1?<br>this.$emit(“dataA”,showA)<br>??</p>
+        <p>###动画<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">###需要下载animated.css文件并引入</span><br><span class="line">###命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)</span><br><span class="line">&lt;transition enter-active-class=&quot;animated zoomInLeft&quot; leave-active-class=&apos;animated zoomOutRight&apos; &gt;</span><br><span class="line">&lt;p v-bind:key=&quot;&quot;&gt;&lt;/p&gt;</span><br><span class="line">&lt;p v-bind:key=&quot;&quot;&gt;&lt;/p&gt;&lt;!--备注：多个元素运动是必须添加key,单个元素运动不需要绑定key 且注意；运动的元素必须包含在transition标签中--&gt;</span><br><span class="line">&lt;/transition&gt;</span><br></pre></td></tr></table></figure></p>
+<p>###路由实例方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">router.push(&#123;path:&apos;home&apos;&#125;)//直接添加一个路由，表现是切换路由，本质是往历史记录里添加一个记录</span><br><span class="line">router.replace&#123;&#123;path:&apos;news&apos;&#125;&#125;//直接添加一个路由，表现是切换路由，本质是历史记录里并无该记录</span><br><span class="line"></span><br><span class="line">main.js文件中</span><br><span class="line">import Vue from &apos;./vue&apos;;</span><br><span class="line">import VueRouter from &apos;./vue-router&apos;</span><br><span class="line">import RouterConfig from &apos;./router.config.js&apos;</span><br><span class="line">import App from &apos;./App.vue&apos;</span><br><span class="line"></span><br><span class="line">const router=new VueRouter(RouterConfig)</span><br><span class="line">new Vue(&#123;</span><br><span class="line">router,</span><br><span class="line">el:&apos;#app&apos;,</span><br><span class="line">render:h=&gt;h(App)</span><br><span class="line">&#125;);</span><br><span class="line">新建router.config.js文件</span><br><span class="line">import Home from &apos;./components/Home.vue&apos;</span><br><span class="line">import News from &apos;./components/News.vue&apos;</span><br><span class="line">export default&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&apos;/home&apos;,component:Home&#125;,</span><br><span class="line">        &#123;path:&apos;/news&apos;,component:News&#125;,</span><br><span class="line">        &#123;path:&apos;*&apos;,redirect:&apos;/home&apos;&#125;//路由重定向</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/07/Vue2-0/" data-id="cji4cqn1000014gv02f75jrkj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/07/Vue2-0/" data-id="cji5b5cqs0000h4v0hopqck3w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -140,7 +141,7 @@
       <ul>
         
           <li>
-            <a href="/2018/06/07/Vue2-0/">Vue2.0</a>
+            <a href="/2018/06/07/Vue2-0/">vue-router2.0</a>
           </li>
         
           <li>
