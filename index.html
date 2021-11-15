@@ -71,6 +71,112 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/15/vue/" class="article-date">
+  <time class="dt-published" datetime="2021-11-15T05:05:28.064Z" itemprop="datePublished">2021-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-vue"><a href="#title-vue" class="headerlink" title="title:vue"></a>title:vue</h2><h3 id="需要下载animated-css文件并引入"><a href="#需要下载animated-css文件并引入" class="headerlink" title="需要下载animated.css文件并引入"></a>需要下载animated.css文件并引入</h3><h3 id="命令-brower-install-animated-css-备注：brower为纯前端的下载资源的管理工具"><a href="#命令-brower-install-animated-css-备注：brower为纯前端的下载资源的管理工具" class="headerlink" title="命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)"></a>命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition enter-active-class=&quot;animated zoomInLeft&quot; leave-active-class=&#x27;animated zoomOutRight&#x27; &gt;</span><br><span class="line">&lt;p v-bind:key=&quot;&quot;&gt;&lt;/p&gt;</span><br><span class="line">&lt;p v-bind:key=&quot;&quot;&gt;&lt;/p&gt;备注：多个元素运动是必须添加key,单个元素运动不需要绑定key 且注意；运动的元素必须包含在transition标签中-</span><br><span class="line">&lt;/transition&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="路由实例方法"><a href="#路由实例方法" class="headerlink" title="路由实例方法"></a>路由实例方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">router.push(&#123;path:&#x27;home&#x27;&#125;)//直接添加一个路由，表现是切换路由，本质是往历史记录里添加一个记录</span><br><span class="line">router.replace&#123;&#123;path:&#x27;news&#x27;&#125;&#125;//直接添加一个路由，表现是切换路由，本质是历史记录里并无该记录</span><br><span class="line"></span><br><span class="line">main.js文件中</span><br><span class="line">import Vue from &#x27;./vue&#x27;;</span><br><span class="line">import VueRouter from &#x27;./vue-router&#x27;</span><br><span class="line">import RouterConfig from &#x27;./router.config.js&#x27;</span><br><span class="line">import App from &#x27;./App.vue&#x27;</span><br><span class="line"></span><br><span class="line">const router=new VueRouter(RouterConfig)</span><br><span class="line">new Vue(&#123;</span><br><span class="line">router,</span><br><span class="line">el:&#x27;#app&#x27;,</span><br><span class="line">render:h=&gt;h(App)</span><br><span class="line">&#125;);</span><br><span class="line">新建router.config.js文件</span><br><span class="line">import Home from &#x27;./components/Home.vue&#x27;</span><br><span class="line">import News from &#x27;./components/News.vue&#x27;</span><br><span class="line">export default&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&#x27;/home&#x27;,component:Home&#125;,</span><br><span class="line">        &#123;path:&#x27;/news&#x27;,component:News&#125;,</span><br><span class="line">        &#123;path:&#x27;*&#x27;,redirect:&#x27;/home&#x27;&#125;//路由重定向</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://luoye7121.github.io/2021/11/15/vue/" data-id="ckw07fxxa0008j8rzdrpv7zjs" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-es6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/15/es6/" class="article-date">
+  <time class="dt-published" datetime="2021-11-15T05:04:43.000Z" itemprop="datePublished">2021-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/11/15/es6/">es6</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://luoye7121.github.io/2021/11/15/es6/" data-id="ckw07fxx60003j8rz2wy09z46" data-title="es6" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-s6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/15/s6/" class="article-date">
+  <time class="dt-published" datetime="2021-11-15T05:04:35.000Z" itemprop="datePublished">2021-11-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/11/15/s6/">s6</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://luoye7121.github.io/2021/11/15/s6/" data-id="ckw07fxxa0007j8rz7sn46itb" data-title="s6" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-node" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/11/15/node/" class="article-date">
@@ -109,9 +215,9 @@
 
 
   
-    <article id="post-node/基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/11/15/node/%E5%9F%BA%E7%A1%80/" class="article-date">
+    <a href="/2021/11/15/%E5%9F%BA%E7%A1%80/" class="article-date">
   <time class="dt-published" datetime="2021-11-15T04:53:01.776Z" itemprop="datePublished">2021-11-15</time>
 </a>
     
@@ -128,37 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://luoye7121.github.io/2021/11/15/node/%E5%9F%BA%E7%A1%80/" data-id="ckw074c4p0000i0rz1cpl93es" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-vue/vue" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/11/15/vue/vue/" class="article-date">
-  <time class="dt-published" datetime="2021-11-15T03:32:19.979Z" itemprop="datePublished">2021-11-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <hr>
-<h2 id="title-vue"><a href="#title-vue" class="headerlink" title="title:vue"></a>title:vue</h2><h3 id="需要下载animated-css文件并引入"><a href="#需要下载animated-css文件并引入" class="headerlink" title="需要下载animated.css文件并引入"></a>需要下载animated.css文件并引入</h3><h3 id="命令-brower-install-animated-css-备注：brower为纯前端的下载资源的管理工具"><a href="#命令-brower-install-animated-css-备注：brower为纯前端的下载资源的管理工具" class="headerlink" title="命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)"></a>命令 $brower install animated.css(备注：brower为纯前端的下载资源的管理工具)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition enter-active-class=&quot;animated zoomInLeft&quot; leave-active-class=&#x27;animated zoomOutRight&#x27; &gt;</span><br><span class="line">&lt;p v-bind:key=&quot;&quot;&gt;&lt;/p&gt;</span><br><span class="line">&lt;p v-bind:key=&quot;&quot;&gt;&lt;/p&gt;备注：多个元素运动是必须添加key,单个元素运动不需要绑定key 且注意；运动的元素必须包含在transition标签中-</span><br><span class="line">&lt;/transition&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="路由实例方法"><a href="#路由实例方法" class="headerlink" title="路由实例方法"></a>路由实例方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">router.push(&#123;path:&#x27;home&#x27;&#125;)//直接添加一个路由，表现是切换路由，本质是往历史记录里添加一个记录</span><br><span class="line">router.replace&#123;&#123;path:&#x27;news&#x27;&#125;&#125;//直接添加一个路由，表现是切换路由，本质是历史记录里并无该记录</span><br><span class="line"></span><br><span class="line">main.js文件中</span><br><span class="line">import Vue from &#x27;./vue&#x27;;</span><br><span class="line">import VueRouter from &#x27;./vue-router&#x27;</span><br><span class="line">import RouterConfig from &#x27;./router.config.js&#x27;</span><br><span class="line">import App from &#x27;./App.vue&#x27;</span><br><span class="line"></span><br><span class="line">const router=new VueRouter(RouterConfig)</span><br><span class="line">new Vue(&#123;</span><br><span class="line">router,</span><br><span class="line">el:&#x27;#app&#x27;,</span><br><span class="line">render:h=&gt;h(App)</span><br><span class="line">&#125;);</span><br><span class="line">新建router.config.js文件</span><br><span class="line">import Home from &#x27;./components/Home.vue&#x27;</span><br><span class="line">import News from &#x27;./components/News.vue&#x27;</span><br><span class="line">export default&#123;</span><br><span class="line">    routes:[</span><br><span class="line">        &#123;path:&#x27;/home&#x27;,component:Home&#125;,</span><br><span class="line">        &#123;path:&#x27;/news&#x27;,component:News&#125;,</span><br><span class="line">        &#123;path:&#x27;*&#x27;,redirect:&#x27;/home&#x27;&#125;//路由重定向</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://luoye7121.github.io/2021/11/15/vue/vue/" data-id="ckw049pq000003crzgt2680j9" data-title="" class="article-share-link">Share</a>
+      <a data-url="https://luoye7121.github.io/2021/11/15/%E5%9F%BA%E7%A1%80/" data-id="ckw07fxx80005j8rzcjvcdlvr" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -332,23 +408,23 @@
       <ul>
         
           <li>
+            <a href="/2021/11/15/vue/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/15/es6/">es6</a>
+          </li>
+        
+          <li>
+            <a href="/2021/11/15/s6/">s6</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/15/node/">node</a>
           </li>
         
           <li>
-            <a href="/2021/11/15/node/%E5%9F%BA%E7%A1%80/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/11/15/vue/vue/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/11/15/hexo/">hexo 配置</a>
-          </li>
-        
-          <li>
-            <a href="/2021/11/15/hello-world/">Hello World</a>
+            <a href="/2021/11/15/%E5%9F%BA%E7%A1%80/">(no title)</a>
           </li>
         
       </ul>
