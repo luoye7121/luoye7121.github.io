@@ -25,8 +25,8 @@
 <meta property="og:site_name" content="前端博客">
 <meta property="og:description" content="CSS中的BFC详解引言： 这篇文章是我对BFC的理解及总结，带你揭开BFC的面纱。你将会知道BFC是什么，形成BFC的条件，BFC的相关特性，以及他的实际应用。   一、何为BFC     BFC（Block Formatting Context）格式化上下文，是Web页面中盒模型布局的CSS渲染模式，指一个独立的渲染区域或者说是一个隔离的独立容器。   二、形成BFC的条件    1、浮动元素">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-11-30T02:03:03.717Z">
-<meta property="article:modified_time" content="2021-11-30T02:03:03.717Z">
+<meta property="article:published_time" content="2021-11-30T02:05:06.417Z">
+<meta property="article:modified_time" content="2021-11-30T02:05:06.417Z">
 <meta property="article:author" content="LiTing">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -304,7 +304,7 @@
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="/css/bfc.html" class="article-date">
-	  <time datetime="2021-11-30T02:03:03.717Z" itemprop="datePublished">2021-11-30</time>
+	  <time datetime="2021-11-30T02:05:06.417Z" itemprop="datePublished">2021-11-30</time>
 	</a>
 </span>
         
@@ -391,16 +391,16 @@
 <li><p>html：</p>
 </li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    &lt;div class=&quot;contain&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">* css：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>.column:nth-of-type(1),<br>.column:nth-of-type(2) {<br>    float: left;<br>    width: 100px;<br>    height: 300px;<br>    background-color: green;<br>}<br>.column:nth-of-type(2) {<br>    float: right;<br>}<br>.column:nth-of-type(3) {<br>    overflow: hidden;  /<em>创建bfc</em>/<br>    height: 300px;<br>    background-color: red;<br>}</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[三栏布局](三栏布局.html)</span><br><span class="line">&gt; 也可以用来防止字体环绕：众所周知，浮动的盒子会遮盖下面的盒子，但是下面盒子里的文字是不会被遮盖的，文字反而还会环绕浮动的盒子。这也是一个比较有趣的特性</span><br><span class="line">* html：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<pre><code>&lt;div class=&quot;left&quot;&gt;&lt;/div&gt;
-&lt;p&gt;你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
-   你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
-   你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
-&lt;/p&gt;
-</code></pre>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* css：</span><br><span class="line"></span><br><span class="line">&gt;（1）环绕</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">    &lt;div class=&quot;contain&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.column:nth-of-type(1),</span><br><span class="line">.column:nth-of-type(2) &#123;</span><br><span class="line">    float: left;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line">.column:nth-of-type(2) &#123;</span><br><span class="line">    float: right;</span><br><span class="line">&#125;</span><br><span class="line">.column:nth-of-type(3) &#123;</span><br><span class="line">    overflow: hidden;  /*创建bfc*/</span><br><span class="line">    height: 300px;</span><br><span class="line">    background-color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80.html">三栏布局</a></p>
+<blockquote>
+<p>也可以用来防止字体环绕：众所周知，浮动的盒子会遮盖下面的盒子，但是下面盒子里的文字是不会被遮盖的，文字反而还会环绕浮动的盒子。这也是一个比较有趣的特性</p>
+</blockquote>
+<ul>
+<li>html：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    &lt;div class=&quot;left&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;p&gt;你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</span><br><span class="line">       你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</span><br><span class="line">       你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">```    </span><br><span class="line">* css：</span><br><span class="line"></span><br><span class="line">&gt;（1）环绕</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>.left {<br>    float: left;<br>    width: 100px;<br>    height: 100px;<br>    background-color: yellow;<br>}</p>
 <p>p {<br>    background-color: green;</p>
 <p>}</p>
