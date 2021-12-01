@@ -17,20 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>vue | Hexo</title>
-  <meta name="description" content="vue掘金源码解析好文vue base节流函数在vue中的应用">
+  <title>Hexo</title>
+  <meta name="description" content="vue中通过v-on:click&#x3D;’throttle’绑定的匿名函数(闭包)不生效 demo  12345678910111213141516171819202122232425&lt;button  style&#x3D;&quot;margin-top:100px;&quot; :disabled&#x3D;&quot;goalDisabled&quot; v-on:click&#x3D;&quot;newGoal&amp;quo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="vue">
-<meta property="og:url" content="https://luoye7121.github.io/vue/index.html">
+<meta property="og:title" content="前端博客">
+<meta property="og:url" content="https://luoye7121.github.io/vue/%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0%E5%9C%A8vue%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html">
 <meta property="og:site_name" content="前端博客">
-<meta property="og:description" content="vue掘金源码解析好文vue base节流函数在vue中的应用">
+<meta property="og:description" content="vue中通过v-on:click&#x3D;’throttle’绑定的匿名函数(闭包)不生效 demo  12345678910111213141516171819202122232425&lt;button  style&#x3D;&quot;margin-top:100px;&quot; :disabled&#x3D;&quot;goalDisabled&quot; v-on:click&#x3D;&quot;newGoal&amp;quo">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-11-15T05:04:24.000Z">
-<meta property="article:modified_time" content="2021-12-01T05:29:40.735Z">
+<meta property="article:published_time" content="2021-12-01T05:41:09.002Z">
+<meta property="article:modified_time" content="2021-12-01T05:41:09.002Z">
 <meta property="article:author" content="LiTing">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://luoye7121.github.io/vue/index.html">
+  <link rel="canonical" href="https://luoye7121.github.io/vue/%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0%E5%9C%A8vue%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html">
   
     <link rel="alternate" href="/atom.xml" title="前端博客" type="application/atom+xml">
   
@@ -300,19 +300,11 @@
     
     <div class="article-header">
       
-        
-  
-    <h1 class="article-title" itemprop="name">
-      vue
-    </h1>
-  
-
-      
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/vue/index.html" class="article-date">
-	  <time datetime="2021-11-15T05:04:24.000Z" itemprop="datePublished">2021-11-15</time>
+	<a href="/vue/%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0%E5%9C%A8vue%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html" class="article-date">
+	  <time datetime="2021-12-01T05:41:09.002Z" itemprop="datePublished">2021-12-01</time>
 	</a>
 </span>
         
@@ -320,13 +312,18 @@
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/vue/index.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/vue/%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0%E5%9C%A8vue%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6949370458793836580">vue掘金源码解析好文</a><br><a href="./base">vue base</a><br><a href="./%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0%E5%9C%A8vue%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8">节流函数在vue中的应用</a></p>
+        <h3 id="vue中通过v-on-click-’throttle’绑定的匿名函数-闭包-不生效"><a href="#vue中通过v-on-click-’throttle’绑定的匿名函数-闭包-不生效" class="headerlink" title="vue中通过v-on:click=’throttle’绑定的匿名函数(闭包)不生效"></a>vue中通过v-on:click=’throttle’绑定的匿名函数(闭包)不生效</h3><ul>
+<li>demo  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;button  style=&quot;margin-top:100px;&quot; :disabled=&quot;goalDisabled&quot; v-on:click=&quot;newGoal&quot;&gt;确定&lt;/button&gt;</span><br><span class="line">newGoal:()&#123;</span><br><span class="line">  let vm=this;</span><br><span class="line">  throttle(vm.saveGoal();</span><br><span class="line">,2000)&#125;,</span><br><span class="line">saveGoal()&#123;</span><br><span class="line">  let vm=this;</span><br><span class="line">  if(vm.goal.length==0)&#123;</span><br><span class="line">    vm.$toast(&#123;</span><br><span class="line">      message:&quot;请输入新年目标&quot;,</span><br><span class="line">    &#125;);</span><br><span class="line">    vm.goalDisabled=false;</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  vm.$services.goal(&#123;</span><br><span class="line">    method:&#x27;post&#x27;,</span><br><span class="line">    prefix:&#x27;mclogReport&#x27;,</span><br><span class="line">    data:&#123;</span><br><span class="line">      userId:vm.$store.state.userInfo.UserId,</span><br><span class="line">      yearTarget:vm.goal</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;).then(res=&gt;&#123;</span><br><span class="line">    vm.$store.dispatch(&quot;saveGoal&quot;,vm.goal)</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></li>
+<li>正确书写为<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;button  style=&quot;margin-top:100px;&quot; :disabled=&quot;goalDisabled&quot; v-on:click=&quot;newGoal()&quot;&gt;确定&lt;/button&gt;</span><br><span class="line">newGoal:throttle(function()&#123;</span><br><span class="line">      let vm=this;</span><br><span class="line">      vm.saveGoal();</span><br><span class="line">    &#125;,2000),</span><br><span class="line">saveGoal()&#123;</span><br><span class="line">    let vm=this;</span><br><span class="line">    if(vm.goal.length==0)&#123;</span><br><span class="line">    vm.$toast(&#123;</span><br><span class="line">        message:&quot;请输入新年目标&quot;,</span><br><span class="line">    &#125;);</span><br><span class="line">    vm.goalDisabled=false;</span><br><span class="line">    return;</span><br><span class="line">    &#125;</span><br><span class="line">    vm.$services.goal(&#123;</span><br><span class="line">    method:&#x27;post&#x27;,</span><br><span class="line">    prefix:&#x27;mclogReport&#x27;,</span><br><span class="line">    data:&#123;</span><br><span class="line">        userId:vm.$store.state.userInfo.UserId,</span><br><span class="line">        yearTarget:vm.goal</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;).then(res=&gt;&#123;</span><br><span class="line">    vm.$store.dispatch(&quot;saveGoal&quot;,vm.goal)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="节流函数"><a href="#节流函数" class="headerlink" title="节流函数"></a>节流函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 节流</span><br><span class="line">export function throttle(func, wait) &#123;</span><br><span class="line">  let timer = null;</span><br><span class="line">  return function() &#123;</span><br><span class="line">    let context = this;</span><br><span class="line">    let args=arguments;</span><br><span class="line">    if(timer)&#123;</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">      timer = setTimeout(() =&gt; &#123;</span><br><span class="line">        func.apply(context, args);</span><br><span class="line">        timer = null;</span><br><span class="line">      &#125;, wait)</span><br><span class="line">   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904159578161159">vue中使用节流函数</a></p>
 
       
     </div>
@@ -336,7 +333,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://luoye7121.github.io/vue/index.html" title="vue" target="_blank" rel="external">https://luoye7121.github.io/vue/index.html</a>
+      <a href="https://luoye7121.github.io/vue/%E8%8A%82%E6%B5%81%E5%87%BD%E6%95%B0%E5%9C%A8vue%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.html" title="" target="_blank" rel="external">https://luoye7121.github.io/vue/节流函数在vue中的应用.html</a>
     </li>
     
     <li class="post-copyright-license">
