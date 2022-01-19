@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Hexo</title>
+  <meta name="description" content="电商移动前端API文档request域名：小程序只支持 https 协议，并且要求是已备案的域名。 1234https:&#x2F;&#x2F;www.zhengzhicheng.cn备用：https:&#x2F;&#x2F;autumnfish.cn&#x2F;wxhttps:&#x2F;&#x2F;www.uinav.com    文档更新说明  更新日期   2019-04-01  返回值调整123新版接口调整：  res.data.message旧版接口废弃">
+<meta property="og:type" content="website">
+<meta property="og:title" content="前端博客">
+<meta property="og:url" content="https://luoye7121.github.io/plugin/un-app%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%95%86%E5%9F%8EAPI%E6%96%87%E6%A1%A3.html">
+<meta property="og:site_name" content="前端博客">
+<meta property="og:description" content="电商移动前端API文档request域名：小程序只支持 https 协议，并且要求是已备案的域名。 1234https:&#x2F;&#x2F;www.zhengzhicheng.cn备用：https:&#x2F;&#x2F;autumnfish.cn&#x2F;wxhttps:&#x2F;&#x2F;www.uinav.com    文档更新说明  更新日期   2019-04-01  返回值调整123新版接口调整：  res.data.message旧版接口废弃">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-19T00:53:23.420Z">
+<meta property="article:modified_time" content="2020-09-01T04:23:08.838Z">
+<meta property="article:author" content="LiTing">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://luoye7121.github.io/plugin/un-app%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%95%86%E5%9F%8EAPI%E6%96%87%E6%A1%A3.html">
+  
+    <link rel="alternate" href="/atom.xml" title="前端博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="main-center theme-blue" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/cofess" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">LT</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">前端研发</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> beijing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-es6">
+          <a href="/es6">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">es6</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-webpack">
+          <a href="/webpack">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">webpack</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-interview">
+          <a href="/interview">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">interview</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-node">
+          <a href="/node">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">node</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-vue">
+          <a href="/vue">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">vue</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-hexo">
+          <a href="/hexo">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">hexo</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-job">
+          <a href="/job">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">job</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-css">
+          <a href="/css">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">css</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+
+    
+      
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2021/11/15/vue/" class="title">vue</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-11-15T05:04:43.000Z" itemprop="datePublished">2021-11-15</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="page-" class="article article-type-page" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/plugin/un-app%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%95%86%E5%9F%8EAPI%E6%96%87%E6%A1%A3.html" class="article-date">
+	  <time datetime="2022-01-19T00:53:23.420Z" itemprop="datePublished">2022-01-19</time>
+	</a>
+</span>
+        
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/plugin/un-app%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%95%86%E5%9F%8EAPI%E6%96%87%E6%A1%A3.html#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="电商移动前端API文档"><a href="#电商移动前端API文档" class="headerlink" title="电商移动前端API文档"></a>电商移动前端API文档</h1><p>request域名：小程序只支持 https 协议，并且要求是已备案的域名。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhengzhicheng.cn</span><br><span class="line">备用：</span><br><span class="line">https://autumnfish.cn/wx</span><br><span class="line">https://www.uinav.com</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="文档更新说明"><a href="#文档更新说明" class="headerlink" title="文档更新说明"></a>文档更新说明</h2><blockquote>
+<p> 更新日期   2019-04-01</p>
+</blockquote>
+<h3 id="返回值调整"><a href="#返回值调整" class="headerlink" title="返回值调整"></a>返回值调整</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新版接口调整：  res.data.message</span><br><span class="line"></span><br><span class="line">旧版接口废弃：  res.data.data</span><br></pre></td></tr></table></figure>
+
+<h3 id="分类页图片"><a href="#分类页图片" class="headerlink" title="分类页图片"></a>分类页图片</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新版接口调整：  cat_icon 属性直接返回完整图片 url 地址</span><br><span class="line"></span><br><span class="line">旧版接口废弃：  cat_icon 返回相对路径，需要手动拼接路径</span><br></pre></td></tr></table></figure>
+
+<h3 id="订单支付接口"><a href="#订单支付接口" class="headerlink" title="订单支付接口"></a>订单支付接口</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新版接口调整：  支付对象数据为 res.data.message.pay</span><br><span class="line"></span><br><span class="line">旧版接口废弃：  支付对象数据为 res.data.data.wxorder</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="路径说明"><a href="#路径说明" class="headerlink" title="路径说明"></a>路径说明</h2><ul>
+<li>根路径说明<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://请求域名/api/public/v1</span><br></pre></td></tr></table></figure></li>
+<li>路径权限说明<ul>
+<li>路径所有权限都可以访问<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://请求域名/api/public/v1</span><br></pre></td></tr></table></figure></li>
+<li>只有登录用户才可以访问路径<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://请求域名/api/public/v1/my</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="电商登录实现方式"><a href="#电商登录实现方式" class="headerlink" title="电商登录实现方式"></a>电商登录实现方式</h2><ul>
+<li>采用 jwt 方式进行</li>
+<li>实现流程<ol>
+<li>请求登录</li>
+<li>获取token</li>
+<li>访问有权限的路径必须把 token 放置到 http 头中<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;Authorization&quot; : token</span><br></pre></td></tr></table></figure></li>
+<li>token 不过期，长期有效。</li>
+</ol>
+</li>
+</ul>
+<h2 id="API详情"><a href="#API详情" class="headerlink" title="API详情"></a>API详情</h2><h3 id="全局权限访问"><a href="#全局权限访问" class="headerlink" title="全局权限访问"></a>全局权限访问</h3><ul>
+<li>访问根路径<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://请求域名/api/public/v1</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="主页API"><a href="#主页API" class="headerlink" title="主页API"></a>主页API</h4><h5 id="获取首页轮播图数据"><a href="#获取首页轮播图数据" class="headerlink" title="获取首页轮播图数据"></a>获取首页轮播图数据</h5><ul>
+<li>请求路径：https://请求域名/api/public/v1/home/swiperdata</li>
+<li>请求方法：GET</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>image_src</td>
+<td>图片路径</td>
+<td></td>
+</tr>
+<tr>
+<td>open_type</td>
+<td>导航链接类型</td>
+<td></td>
+</tr>
+<tr>
+<td>navigator_url</td>
+<td>导航链接路径</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据参考</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/banner1.png&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;goods_id&quot;</span>: <span class="number">129</span>,</span><br><span class="line">            <span class="attr">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_detail/main?goods_id=129&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/banner2.png&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;goods_id&quot;</span>: <span class="number">395</span>,</span><br><span class="line">            <span class="attr">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_detail/main?goods_id=395&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/banner3.png&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;goods_id&quot;</span>: <span class="number">38</span>,</span><br><span class="line">            <span class="attr">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_detail/main?goods_id=38&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>, <span class="attr">&quot;status&quot;</span>: <span class="number">200</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="获取首页分类选项数据"><a href="#获取首页分类选项数据" class="headerlink" title="获取首页分类选项数据"></a>获取首页分类选项数据</h5><ul>
+<li>请求路径：https://请求域名/api/public/v1/home/catitems</li>
+<li>请求方法：GET</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>名称</td>
+<td></td>
+</tr>
+<tr>
+<td>image_src</td>
+<td>图片路径</td>
+<td></td>
+</tr>
+<tr>
+<td>open_type</td>
+<td>导航链接类型</td>
+<td></td>
+</tr>
+<tr>
+<td>navigator_url</td>
+<td>导航链接路径</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;分类&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/icon_index_nav_4@2x.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;switchTab&quot;</span>,</span><br><span class="line">            <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/category/main&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;秒杀拍&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/icon_index_nav_3@2x.png&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;超市购&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/icon_index_nav_2@2x.png&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;母婴品&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/icon_index_nav_1@2x.png&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123; <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>, <span class="string">&quot;status&quot;</span>: <span class="number">200</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="获取首页楼层数据"><a href="#获取首页楼层数据" class="headerlink" title="获取首页楼层数据"></a>获取首页楼层数据</h5><ul>
+<li>请求路径：https://请求域名/api/public/v1/home/floordata</li>
+<li>请求方法：GET</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>floor_title</td>
+<td>楼层标题</td>
+<td></td>
+</tr>
+<tr>
+<td>product_list</td>
+<td>楼层内容列表</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>名称</td>
+<td></td>
+</tr>
+<tr>
+<td>image_src</td>
+<td>图片路径</td>
+<td></td>
+</tr>
+<tr>
+<td>image_width</td>
+<td>商品图片宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>open_type</td>
+<td>导航链接类型</td>
+<td></td>
+</tr>
+<tr>
+<td>navigator_url</td>
+<td>导航链接路径</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;floor_title&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;name&quot;</span>: <span class="string">&quot;时尚女装&quot;</span>,</span><br><span class="line">                <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor01_title.png&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;product_list&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;优质服饰&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor01_1@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;232&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=服饰&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;春季热门&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor01_2@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=热&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;爆款清仓&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor01_3@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=爆款&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;倒春寒&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor01_4@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=春季&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;怦然心动&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor01_5@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=心动&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;floor_title&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;name&quot;</span>: <span class="string">&quot;户外活动&quot;</span>,</span><br><span class="line">                <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor02_title.png&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;product_list&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;勇往直前&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor02_1@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;232&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=户外&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;户外登山包&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor02_2@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;273&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=登山包&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;超强手套&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor02_3@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;193&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=手套&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;户外运动鞋&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor02_4@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;193&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=运动鞋&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;冲锋衣系列&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor02_5@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;273&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=冲锋衣&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;floor_title&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;name&quot;</span>: <span class="string">&quot;箱包配饰&quot;</span>,</span><br><span class="line">                <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor03_title.png&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;product_list&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;清新气质&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor03_1@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;232&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=饰品&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;复古胸针&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor03_2@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;263&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=胸针&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;韩版手链&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor03_3@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;203&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=手链&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;水晶项链&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor03_4@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;193&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=水晶项链&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;情侣表&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://www.zhengzhicheng.cn/pyg/pic_floor03_5@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;273&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=情侣表&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123; <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>, <span class="string">&quot;status&quot;</span>: <span class="number">200</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="商品API"><a href="#商品API" class="headerlink" title="商品API"></a>商品API</h4><h5 id="商品列表搜索"><a href="#商品列表搜索" class="headerlink" title="商品列表搜索"></a>商品列表搜索</h5><ul>
+<li><p>请求路径：https://请求域名/api/public/v1/goods/search</p>
+</li>
+<li><p>请求方法：GET</p>
+</li>
+<li><p>请求参数</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>query</td>
+<td>查询关键词</td>
+<td></td>
+</tr>
+<tr>
+<td>cid</td>
+<td>分类ID</td>
+<td>可选</td>
+</tr>
+<tr>
+<td>pagenum</td>
+<td>页数索引</td>
+<td>可选默认第一页</td>
+</tr>
+<tr>
+<td>pagesize</td>
+<td>每页长度</td>
+<td>可选默认20条</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>total</td>
+<td>总共记录</td>
+<td></td>
+</tr>
+<tr>
+<td>pagenum</td>
+<td>当前页数</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td>商品ID</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_id</td>
+<td>分类ID</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_name</td>
+<td>商品名称</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td>商品价格</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_number</td>
+<td>商品数量</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_weight</td>
+<td>商品重量</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_big_logo</td>
+<td>商品大图标</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_small_logo</td>
+<td>商品小图标</td>
+<td></td>
+</tr>
+<tr>
+<td>add_time</td>
+<td>商品添加时间</td>
+<td></td>
+</tr>
+<tr>
+<td>upd_time</td>
+<td>商品更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>hot_mumber</td>
+<td>热门商品数</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_one_id</td>
+<td>所属一级分类</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_two_id</td>
+<td>所属二级分类</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_three_id</td>
+<td>所属三级分类</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;message&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;total&quot;</span>: <span class="number">2058</span>,</span><br><span class="line">        <span class="attr">&quot;pagenum&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;goods&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;goods_id&quot;</span>: <span class="number">57332</span>,</span><br><span class="line">                <span class="attr">&quot;cat_id&quot;</span>: <span class="number">998</span>,</span><br><span class="line">                <span class="attr">&quot;goods_name&quot;</span>: <span class="string">&quot;400毫升 海鲜食品冷藏冰包 注水冰袋医用冰袋户外冷藏保鲜熟食冷藏反复使用（10个装）&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;goods_price&quot;</span>: <span class="number">14</span>,</span><br><span class="line">                <span class="attr">&quot;goods_number&quot;</span>: <span class="number">100</span>,</span><br><span class="line">                <span class="attr">&quot;goods_weight&quot;</span>: <span class="number">100</span>,</span><br><span class="line">                <span class="attr">&quot;goods_big_logo&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_800x800.jpg&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;goods_small_logo&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_400x400.jpg&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;add_time&quot;</span>: <span class="number">1516662792</span>,</span><br><span class="line">                <span class="attr">&quot;upd_time&quot;</span>: <span class="number">1516662792</span>,</span><br><span class="line">                <span class="attr">&quot;hot_mumber&quot;</span>: <span class="number">0</span>,</span><br><span class="line">                <span class="attr">&quot;is_promote&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">&quot;cat_one_id&quot;</span>: <span class="number">962</span>,</span><br><span class="line">                <span class="attr">&quot;cat_two_id&quot;</span>: <span class="number">981</span>,</span><br><span class="line">                <span class="attr">&quot;cat_three_id&quot;</span>: <span class="number">998</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;goods_id&quot;</span>: <span class="number">57194</span>,</span><br><span class="line">                <span class="attr">&quot;cat_id&quot;</span>: <span class="number">992</span>,</span><br><span class="line">                <span class="attr">&quot;goods_name&quot;</span>: <span class="string">&quot;亿力洗车工具汽车美容用品海绵刷不伤车漆擦车海棉清洁海绵&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;goods_price&quot;</span>: <span class="number">29</span>,</span><br><span class="line">                <span class="attr">&quot;goods_number&quot;</span>: <span class="number">100</span>,</span><br><span class="line">                <span class="attr">&quot;goods_weight&quot;</span>: <span class="number">100</span>,</span><br><span class="line">                <span class="attr">&quot;goods_big_logo&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;goods_small_logo&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;add_time&quot;</span>: <span class="number">1516662312</span>,</span><br><span class="line">                <span class="attr">&quot;upd_time&quot;</span>: <span class="number">1516662312</span>,</span><br><span class="line">                <span class="attr">&quot;hot_mumber&quot;</span>: <span class="number">0</span>,</span><br><span class="line">                <span class="attr">&quot;is_promote&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">&quot;cat_one_id&quot;</span>: <span class="number">962</span>,</span><br><span class="line">                <span class="attr">&quot;cat_two_id&quot;</span>: <span class="number">980</span>,</span><br><span class="line">                <span class="attr">&quot;cat_three_id&quot;</span>: <span class="number">992</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="搜索建议查询"><a href="#搜索建议查询" class="headerlink" title="搜索建议查询"></a>搜索建议查询</h5><ul>
+<li>请求路径：https://请求域名/api/public/v1/goods/qsearch</li>
+<li>请求方法：GET</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>query</td>
+<td>查询内容</td>
+<td>如： goods/qsearch?query=小米</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>goods_id</td>
+<td>商品ID</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_name</td>
+<td>商品名称</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;goods_id&quot;</span>: <span class="number">57332</span>,</span><br><span class="line">            <span class="attr">&quot;goods_name&quot;</span>: <span class="string">&quot;400毫升 海鲜食品冷藏冰包 注水冰袋医用冰袋户外冷藏保鲜熟食冷藏反复使用（10个装）&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;goods_id&quot;</span>: <span class="number">57194</span>,</span><br><span class="line">            <span class="attr">&quot;goods_name&quot;</span>: <span class="string">&quot;亿力洗车工具汽车美容用品海绵刷不伤车漆擦车海棉清洁海绵&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="商品详情"><a href="#商品详情" class="headerlink" title="商品详情"></a>商品详情</h5><ul>
+<li><p>请求路径：https://请求域名/api/public/v1/goods/detail</p>
+</li>
+<li><p>请求方法：GET</p>
+</li>
+<li><p>请求参数</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>goods_id</td>
+<td>商品ID</td>
+<td>必要</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>goods_id</td>
+<td>商品ID</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_id</td>
+<td>分类ID</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_name</td>
+<td>商品名称</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td>商品价格</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_number</td>
+<td>商品数量</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_weight</td>
+<td>商品重量</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_big_logo</td>
+<td>商品大图标</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_small_logo</td>
+<td>商品小图标</td>
+<td></td>
+</tr>
+<tr>
+<td>add_time</td>
+<td>商品添加时间</td>
+<td></td>
+</tr>
+<tr>
+<td>upd_time</td>
+<td>商品更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>hot_mumber</td>
+<td>热门商品数</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_one_id</td>
+<td>所属一级分类</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_two_id</td>
+<td>所属二级分类</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_three_id</td>
+<td>所属三级分类</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_introduce</td>
+<td>商品介绍HTML富文本</td>
+<td></td>
+</tr>
+<tr>
+<td>pics</td>
+<td>商品图片列表</td>
+<td></td>
+</tr>
+<tr>
+<td>attrs</td>
+<td>商品属性列表</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;goods_id&quot;</span>: <span class="number">57332</span>,</span><br><span class="line">        <span class="string">&quot;cat_id&quot;</span>: <span class="number">998</span>,</span><br><span class="line">        <span class="string">&quot;goods_name&quot;</span>: <span class="string">&quot;400毫升 海鲜食品冷藏冰包 注水冰袋医用冰袋户外冷藏保鲜熟食冷藏反复使用（10个装）&quot;</span>,</span><br><span class="line">        <span class="string">&quot;goods_price&quot;</span>: <span class="number">14</span>,</span><br><span class="line">        <span class="string">&quot;goods_number&quot;</span>: <span class="number">100</span>,</span><br><span class="line">        <span class="string">&quot;goods_weight&quot;</span>: <span class="number">100</span>,</span><br><span class="line">        <span class="string">&quot;goods_introduce&quot;</span>: <span class="string">&quot;&lt;div class=\&quot;lazyimg\&quot;&gt;&lt;!-- Save for Web Slices (20170730关联模板.psd) --&gt;\n&lt;p&gt;&lt;img data-src=\&quot;//image.suning.cn/uimg/sop/commodity/167890268714163515505319_x.jpg?from=mobile&amp;amp;format=80q.webp\&quot; alt=\&quot;\&quot; usemap=\&quot;#Map\&quot; border=\&quot;0\&quot; src=\&quot;//image.suning.cn/uimg/sop/commodity/167890268714163515505319_x.jpg?from=mobile&amp;format=80q.webp\&quot; width=\&quot;100%\&quot; height=\&quot;auto\&quot;&gt; &lt;/p&gt;\n&lt;!-- End Save for Web Slices --&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;img picsize=\&quot;706KB\&quot; data-src=\&quot;//image.suning.cn/uimg/sop/phonecomm/157271695856956094412300_640x.jpg?from=mobile&amp;amp;format=80q.webp\&quot; alt=\&quot;\&quot; src=\&quot;//image.suning.cn/uimg/sop/phonecomm/157271695856956094412300_640x.jpg?from=mobile&amp;format=80q.webp\&quot; width=\&quot;100%\&quot; height=\&quot;auto\&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;img picsize=\&quot;610KB\&quot; data-src=\&quot;//image.suning.cn/uimg/sop/phonecomm/192892939814201549766135_640x.jpg?from=mobile&amp;amp;format=80q.webp\&quot; alt=\&quot;\&quot; src=\&quot;//image.suning.cn/uimg/sop/phonecomm/192892939814201549766135_640x.jpg?from=mobile&amp;format=80q.webp\&quot; width=\&quot;100%\&quot; height=\&quot;auto\&quot;&gt;&lt;/p&gt;&lt;/div&gt;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;goods_big_logo&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_800x800.jpg&quot;</span>,</span><br><span class="line">        <span class="string">&quot;goods_small_logo&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_400x400.jpg&quot;</span>,</span><br><span class="line">        <span class="string">&quot;goods_state&quot;</span>: <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;is_del&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">        <span class="string">&quot;add_time&quot;</span>: <span class="number">1516662792</span>,</span><br><span class="line">        <span class="string">&quot;upd_time&quot;</span>: <span class="number">1516662792</span>,</span><br><span class="line">        <span class="string">&quot;delete_time&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">        <span class="string">&quot;hot_mumber&quot;</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;is_promote&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="string">&quot;cat_one_id&quot;</span>: <span class="number">962</span>,</span><br><span class="line">        <span class="string">&quot;cat_two_id&quot;</span>: <span class="number">981</span>,</span><br><span class="line">        <span class="string">&quot;cat_three_id&quot;</span>: <span class="number">998</span>,</span><br><span class="line">        <span class="string">&quot;goods_cat&quot;</span>: <span class="string">&quot;962,981,998&quot;</span>,</span><br><span class="line">        <span class="string">&quot;pics&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">&quot;pics_id&quot;</span>: <span class="number">234751</span>,</span><br><span class="line">                <span class="string">&quot;goods_id&quot;</span>: <span class="number">57332</span>,</span><br><span class="line">                <span class="string">&quot;pics_big&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_800x800.jpg&quot;</span>,</span><br><span class="line">                <span class="string">&quot;pics_mid&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_400x400.jpg&quot;</span>,</span><br><span class="line">                <span class="string">&quot;pics_sma&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_200x200.jpg&quot;</span>,</span><br><span class="line">                <span class="string">&quot;pics_big_url&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_800x800.jpg&quot;</span>,</span><br><span class="line">                <span class="string">&quot;pics_mid_url&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_400x400.jpg&quot;</span>,</span><br><span class="line">                <span class="string">&quot;pics_sma_url&quot;</span>: <span class="string">&quot;http://image4.suning.cn/uimg/b2c/newcatentries/0070083251-000000000168369396_1_200x200.jpg&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&quot;attrs&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">&quot;goods_id&quot;</span>: <span class="number">57332</span>,</span><br><span class="line">                <span class="string">&quot;attr_id&quot;</span>: <span class="number">8519</span>,</span><br><span class="line">                <span class="string">&quot;attr_value&quot;</span>: <span class="string">&quot;400&quot;</span>,</span><br><span class="line">                <span class="string">&quot;add_price&quot;</span>: <span class="number">0</span>,</span><br><span class="line">                <span class="string">&quot;attr_name&quot;</span>: <span class="string">&quot;主体-型号&quot;</span>,</span><br><span class="line">                <span class="string">&quot;attr_sel&quot;</span>: <span class="string">&quot;only&quot;</span>,</span><br><span class="line">                <span class="string">&quot;attr_write&quot;</span>: <span class="string">&quot;manual&quot;</span>,</span><br><span class="line">                <span class="string">&quot;attr_vals&quot;</span>: <span class="string">&quot;Q6&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="string">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="分类API"><a href="#分类API" class="headerlink" title="分类API"></a>分类API</h4><h5 id="获取分类数据"><a href="#获取分类数据" class="headerlink" title="获取分类数据"></a>获取分类数据</h5><ul>
+<li><p>请求路径：https://请求域名/api/public/v1/categories</p>
+</li>
+<li><p>请求方法：GET</p>
+</li>
+<li><p>请求参数</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cat_id</td>
+<td>分类ID</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_name</td>
+<td>分类名称</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_level</td>
+<td>分类级别</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_icon</td>
+<td>分类图标</td>
+<td>只有3级别分类采用图标</td>
+</tr>
+<tr>
+<td>children</td>
+<td>子分类列表</td>
+<td>对象数组</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;cat_id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="string">&quot;cat_name&quot;</span>: <span class="string">&quot;大家电&quot;</span>,</span><br><span class="line">            <span class="string">&quot;cat_pid&quot;</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">&quot;cat_level&quot;</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="string">&quot;cat_deleted&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="string">&quot;cat_icon&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;cat_id&quot;</span>: <span class="number">3</span>,</span><br><span class="line">                    <span class="string">&quot;cat_name&quot;</span>: <span class="string">&quot;电视&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;cat_pid&quot;</span>: <span class="number">1</span>,</span><br><span class="line">                    <span class="string">&quot;cat_level&quot;</span>: <span class="number">1</span>,</span><br><span class="line">                    <span class="string">&quot;cat_deleted&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                    <span class="string">&quot;cat_icon&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="string">&quot;cat_id&quot;</span>: <span class="number">5</span>,</span><br><span class="line">                        <span class="string">&quot;cat_name&quot;</span>: <span class="string">&quot;曲面电视&quot;</span>,</span><br><span class="line">                        <span class="string">&quot;cat_pid&quot;</span>: <span class="number">3</span>,</span><br><span class="line">                        <span class="string">&quot;cat_level&quot;</span>: <span class="number">2</span>,</span><br><span class="line">                        <span class="string">&quot;cat_deleted&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                        <span class="string">&quot;cat_icon&quot;</span>: <span class="string">&quot;full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg&quot;</span></span><br><span class="line">                    &#125;]</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="string">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="微信用户登录-API"><a href="#微信用户登录-API" class="headerlink" title="微信用户登录  API"></a>微信用户登录  API</h4><h5 id="微信登录换取-Token"><a href="#微信登录换取-Token" class="headerlink" title="微信登录换取 Token"></a>微信登录换取 Token</h5><ul>
+<li><p>请求路径：https://请求域名/api/public/v1/users/wxlogin</p>
+</li>
+<li><p>请求方法：POST</p>
+</li>
+<li><p>请求参数</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>code</td>
+<td>用户登录凭证</td>
+<td>必要，可通过 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/api-login.html#wxloginobject">wx.login()</a>  获取</td>
+</tr>
+<tr>
+<td>encryptedData</td>
+<td>完整用户信息密文</td>
+<td>必要，可通过 getUserInfo 获取</td>
+</tr>
+<tr>
+<td>iv</td>
+<td>加密算法的初始向量</td>
+<td>必要，可通过 getUserInfo 获取</td>
+</tr>
+<tr>
+<td>rawData</td>
+<td>用户信息原始数据字符串</td>
+<td>必要，可通过 getUserInfo 获取，JSON.stringify() 转字符串</td>
+</tr>
+<tr>
+<td>signature</td>
+<td>使用 sha1得到字符串</td>
+<td>必要，可通过 getUserInfo 获取</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求数据参考</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;code&quot;</span>: <span class="string">&quot;013pZWCt0GniKb1ftkBt0AxfDt0pZWCf&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;encryptedData&quot;</span>: <span class="string">&quot;FGMaNbO4ytTFTUzK3wmtfHWoFeQJYkyMajQ5tVbQglwmnJ46SMi43Thq0OZjSSa5Msmnpdfx7yigYkdvUbsiQFyF9xMGEQLpUFcpNjnYoCQOl2Ka5zEeqpMY91ywYAsPISeu1rwvFCU2Ucenxf7gdcDPQ/jNJdORGb86DR+2gVJeg8TZiXWJ66enpynj35DiaE1jNWUSzpgbOvO40dZrWnHVwDEJN+upeSHRR/IW7t3cgtV63/GeZzNhFbUYqNHO6M1KHetwY1u8mFXuZoXwVV7DrEwEzY1btqcfW93q4ekn2uwAUeJM4U+3roBsIT5ZpEM8YtQZVsAwjaWHBe8id1H4lurEFC5/GwLnRONrIiR7KDF7MPxnMO9flWFQEfay5dt9rBELzk1Efjf2H6UnzYfh+o4MbPxtc0cUiHEnNCVcXjDtulXSRUy7RZQPmjF/tYBHHrXEFubxnK4oRBZz/A==&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;iv&quot;</span>: <span class="string">&quot;y/ESFBaesbEzIbB1th5Knw==&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;rawData&quot;</span>:</span><br><span class="line">    <span class="string">&quot;&#123;\&quot;nickName\&quot;:\&quot;优购\&quot;,\&quot;gender\&quot;:0,\&quot;language\&quot;:\&quot;zh_CN\&quot;,\&quot;city\&quot;:\&quot;\&quot;,\&quot;province\&quot;:\&quot;\&quot;,\&quot;country\&quot;:\&quot;\&quot;,\&quot;avatarUrl\&quot;:\&quot;https://wx.qlogo.cn/mmopen/vi_32/icWlxE4rARHaIlib1PRmBtRa2tQicUSEHYu8UIGZ0LLic9C0PticibED6brRFCuQYeLGtwTcBYFgMtcF11N31pVhMF8g/132\&quot;&#125;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;signature&quot;</span>: <span class="string">&quot;d06cd3a54e89e6014e43694844706eaccad109bb&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><p>响应参数参考</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>token</td>
+<td>身份验证标志</td>
+<td></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>用户ID</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>响应数据</p>
+</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;user_id&quot;</span>: <span class="number">12</span>,</span><br><span class="line">    <span class="attr">&quot;user_email_code&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;is_active&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;user_sex&quot;</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_qq&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_tel&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_xueli&quot;</span>: <span class="string">&quot;本科&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_hobby&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_introduce&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;create_time&quot;</span>: <span class="number">1525402223</span>,</span><br><span class="line">    <span class="attr">&quot;update_time&quot;</span>: <span class="number">1525402223</span>,</span><br><span class="line">    <span class="attr">&quot;token&quot;</span>:</span><br><span class="line">      <span class="string">&quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEyLCJpYXQiOjE1MjU0MDIyMjMsImV4cCI6MTUyNTQ4ODYyM30.g-4GtEQNPwT_Xs0Pq7Lrco_9DfHQQsBiOKZerkO-O-o&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;登录成功&quot;</span>, <span class="attr">&quot;status&quot;</span>: <span class="number">200</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="登录后访问"><a href="#登录后访问" class="headerlink" title="登录后访问"></a>登录后访问</h3><ul>
+<li>访问根路径<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//请求域名/api/public/v1/my</span></span><br></pre></td></tr></table></figure></li>
+<li>访问此系列请求必须在头信息中添加token<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Authorization&quot;</span> : token</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="订单API"><a href="#订单API" class="headerlink" title="订单API"></a>订单API</h4><h5 id="创建订单"><a href="#创建订单" class="headerlink" title="创建订单"></a>创建订单</h5><ul>
+<li><p>请求路径：https://请求域名/api/public/v1/my/orders/create</p>
+</li>
+<li><p>请求方法：POST</p>
+</li>
+<li><p>请求参数</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_price</td>
+<td>订单价格</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>consignee_addr</td>
+<td>订单地址</td>
+<td>必要</td>
+</tr>
+<tr>
+<td>order_detail</td>
+<td>订单详情</td>
+<td>可选，字符串格式</td>
+</tr>
+<tr>
+<td>goods</td>
+<td>商品列表内部存放商品（goods_id，goods_number和goods_price）列表</td>
+<td>必要</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>请求数据参考</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;order_price&quot;</span>: <span class="number">0.1</span>,</span><br><span class="line">  <span class="string">&quot;consignee_addr&quot;</span>: <span class="string">&quot;广州市天河区&quot;</span>,</span><br><span class="line">  <span class="string">&quot;order_detail&quot;</span>:</span><br><span class="line">    <span class="string">&quot;[&#123;\&quot;goods_id\&quot;:55578,\&quot;goods_name\&quot;:\&quot;初语2017秋装新款潮牌女装加绒宽松BF风慵懒卫衣女套头连帽上衣\&quot;,\&quot;goods_price\&quot;:279,\&quot;goods_small_logo\&quot;:\&quot;http://image2.suning.cn/uimg/b2c/newcatentries/0070067836-000000000690453616_2_400x400.jpg\&quot;,\&quot;counts\&quot;:1,\&quot;selectStatus\&quot;:true&#125;]&quot;</span>,</span><br><span class="line">  <span class="string">&quot;goods&quot;</span>: [</span><br><span class="line">      &#123; </span><br><span class="line">          <span class="string">&quot;goods_id&quot;</span>: <span class="number">5</span>, </span><br><span class="line">          <span class="string">&quot;goods_number&quot;</span>: <span class="number">11</span>, </span><br><span class="line">          <span class="string">&quot;goods_price&quot;</span>: <span class="number">15</span> </span><br><span class="line">      &#125;,</span><br><span class="line">      &#123; </span><br><span class="line">          <span class="string">&quot;goods_id&quot;</span>: <span class="number">555</span>, </span><br><span class="line">          <span class="string">&quot;goods_number&quot;</span>: <span class="number">1</span>, </span><br><span class="line">          <span class="string">&quot;goods_price&quot;</span>: <span class="number">15</span> </span><br><span class="line">      &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>响应参数</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_id</td>
+<td>订单唯一ID</td>
+<td></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>用户ID</td>
+<td></td>
+</tr>
+<tr>
+<td>order_number</td>
+<td>订单编号</td>
+<td></td>
+</tr>
+<tr>
+<td>order_price</td>
+<td>订单总金额</td>
+<td></td>
+</tr>
+<tr>
+<td>order_pay</td>
+<td>订单支付方式</td>
+<td>支付方式 0未支付 1支付宝 2微信 3银行卡</td>
+</tr>
+<tr>
+<td>consignee_addr</td>
+<td>订单地址</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td>订单支付状态</td>
+<td>订单状态： 0未付款、1已付款</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据参考</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;message&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;order_id&quot;</span>: <span class="number">45</span>,</span><br><span class="line">    <span class="string">&quot;user_id&quot;</span>: <span class="number">12</span>,</span><br><span class="line">    <span class="string">&quot;order_number&quot;</span>: <span class="string">&quot;GD20180504000000000045&quot;</span>,</span><br><span class="line">    <span class="string">&quot;order_price&quot;</span>: <span class="number">0.1</span>,</span><br><span class="line">    <span class="string">&quot;order_pay&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;is_send&quot;</span>: <span class="string">&quot;否&quot;</span>,</span><br><span class="line">    <span class="string">&quot;trade_no&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;order_fapiao_title&quot;</span>: <span class="string">&quot;个人&quot;</span>,</span><br><span class="line">    <span class="string">&quot;order_fapiao_company&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;order_fapiao_content&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;consignee_addr&quot;</span>: <span class="string">&quot;广州市天河区&quot;</span>,</span><br><span class="line">    <span class="string">&quot;pay_status&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;create_time&quot;</span>: <span class="number">1525408071</span>,</span><br><span class="line">    <span class="string">&quot;update_time&quot;</span>: <span class="number">1525408071</span>,</span><br><span class="line">    <span class="string">&quot;order_detail&quot;</span>:</span><br><span class="line">      <span class="string">&quot;[&#123;\&quot;goods_id\&quot;:55578,\&quot;goods_name\&quot;:\&quot;初语2017秋装新款潮牌女装加绒宽松BF风慵懒卫衣女套头连帽上衣\&quot;,\&quot;goods_price\&quot;:279,\&quot;goods_small_logo\&quot;:\&quot;http://image2.suning.cn/uimg/b2c/newcatentries/0070067836-000000000690453616_2_400x400.jpg\&quot;,\&quot;counts\&quot;:1,\&quot;selectStatus\&quot;:true&#125;]&quot;</span>,</span><br><span class="line">    <span class="string">&quot;goods&quot;</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="string">&quot;id&quot;</span>: <span class="number">64</span>,</span><br><span class="line">        <span class="string">&quot;order_id&quot;</span>: <span class="number">45</span>,</span><br><span class="line">        <span class="string">&quot;goods_id&quot;</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="string">&quot;goods_price&quot;</span>: <span class="number">15</span>,</span><br><span class="line">        <span class="string">&quot;goods_number&quot;</span>: <span class="number">11</span>,</span><br><span class="line">        <span class="string">&quot;goods_total_price&quot;</span>: <span class="number">15</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;meta&quot;</span>: &#123; <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;创建订单成功&quot;</span>, <span class="string">&quot;status&quot;</span>: <span class="number">200</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="订单预支付"><a href="#订单预支付" class="headerlink" title="订单预支付"></a>订单预支付</h5><ul>
+<li>请求路径：https://请求域名/api/public/v1/my/orders/req_unifiedorder</li>
+<li>请求方法：POST</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_number</td>
+<td>订单编号</td>
+<td>必要</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">&quot;order_number&quot;</span>: <span class="string">&quot;GD20180507000000000110&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pay</td>
+<td>订单对象</td>
+<td>可通过 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/api-pay.html#wxrequestpaymentobject">wx.requestPayment(OBJECT)</a>，发起微信支付</td>
+</tr>
+<tr>
+<td>timeStamp</td>
+<td>时间戳</td>
+<td></td>
+</tr>
+<tr>
+<td>nonceStr</td>
+<td>随机字符串</td>
+<td></td>
+</tr>
+<tr>
+<td>package</td>
+<td>下单接口返回参数</td>
+<td></td>
+</tr>
+<tr>
+<td>signType</td>
+<td>签名算法</td>
+<td></td>
+</tr>
+<tr>
+<td>paySign</td>
+<td>签名</td>
+<td></td>
+</tr>
+<tr>
+<td>order_number</td>
+<td>订单编号</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;pay&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;timeStamp&quot;</span>: <span class="string">&quot;1525681145&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;nonceStr&quot;</span>: <span class="string">&quot;BkPggorBXZwPGXe3&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;package&quot;</span>: <span class="string">&quot;prepay_id=wx071619042918087bb4c1d3d72999385683&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;signType&quot;</span>: <span class="string">&quot;MD5&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;paySign&quot;</span>: <span class="string">&quot;D1642DEEF1663C8012EDEB9297E1D516&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;order_number&quot;</span>: <span class="string">&quot;GD20180507000000000110&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;预付订单生成成功&quot;</span>, <span class="attr">&quot;status&quot;</span>: <span class="number">200</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="订单支付状态查询"><a href="#订单支付状态查询" class="headerlink" title="订单支付状态查询"></a>订单支付状态查询</h5><ul>
+<li>请求路径：https://请求域名/api/public/v1/my/orders/chkOrder</li>
+<li>请求方法：POST</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_number</td>
+<td>订单编号</td>
+<td>必要</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">&quot;order_number&quot;</span>: <span class="string">&quot;GD20180507000000000050&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>data</td>
+<td>支付状态</td>
+<td></td>
+</tr>
+<tr>
+<td>meta</td>
+<td>订单状态</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 支付成功</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;message&quot;</span>:<span class="string">&quot;支付成功&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>:&#123;<span class="attr">&quot;msg&quot;</span>:<span class="string">&quot;验证成功&quot;</span>,<span class="attr">&quot;status&quot;</span>:<span class="number">200</span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 支付失败</span></span><br><span class="line">&#123; </span><br><span class="line">    <span class="attr">&quot;message&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;订单未支付&quot;</span>, <span class="attr">&quot;status&quot;</span>: <span class="number">400</span> &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="订单查询"><a href="#订单查询" class="headerlink" title="订单查询"></a>订单查询</h5><ul>
+<li>请求路径：https://请求域名/api/public/v1/my/orders/all</li>
+<li>请求方法：GET</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>1</td>
+<td>1  全部订单     2 代付款订单    3 已付款订单</td>
+</tr>
+</tbody></table>
+<ul>
+<li>2响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_id</td>
+<td>订单唯一ID</td>
+<td></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>用户ID</td>
+<td></td>
+</tr>
+<tr>
+<td>order_number</td>
+<td>订单编号</td>
+<td></td>
+</tr>
+<tr>
+<td>order_price</td>
+<td>订单价格</td>
+<td></td>
+</tr>
+<tr>
+<td>order_pay</td>
+<td>订单支付方式</td>
+<td></td>
+</tr>
+<tr>
+<td>consignee_addr</td>
+<td>订单地址</td>
+<td></td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td>订单支付状态</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;order_id&quot;</span>: <span class="number">44</span>,</span><br><span class="line">      <span class="attr">&quot;user_id&quot;</span>: <span class="number">12</span>,</span><br><span class="line">      <span class="attr">&quot;order_number&quot;</span>: <span class="string">&quot;GD20180507000000000050&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;order_price&quot;</span>: <span class="number">0.1</span>,</span><br><span class="line">      <span class="attr">&quot;order_pay&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;is_send&quot;</span>: <span class="string">&quot;否&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;trade_no&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;order_fapiao_title&quot;</span>: <span class="string">&quot;个人&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;order_fapiao_company&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;order_fapiao_content&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;consignee_addr&quot;</span>: <span class="string">&quot;广州市天河区&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;pay_status&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;create_time&quot;</span>: <span class="number">1525407814</span>,</span><br><span class="line">      <span class="attr">&quot;update_time&quot;</span>: <span class="number">1525407814</span>,</span><br><span class="line">      <span class="attr">&quot;order_detail&quot;</span>:</span><br><span class="line">        <span class="string">&quot;[&#123;\&quot;goods_id\&quot;:55578,\&quot;goods_name\&quot;:\&quot;初语2017秋装新款潮牌女装加绒宽松BF风慵懒卫衣女套头连帽上衣\&quot;,\&quot;goods_price\&quot;:279,\&quot;goods_small_logo\&quot;:\&quot;http://image2.suning.cn/uimg/b2c/newcatentries/0070067836-000000000690453616_2_400x400.jpg\&quot;,\&quot;counts\&quot;:1,\&quot;selectStatus\&quot;:true&#125;]&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;获取订单列表成功&quot;</span>, <span class="attr">&quot;status&quot;</span>: <span class="number">200</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://luoye7121.github.io/plugin/un-app%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%95%86%E5%9F%8EAPI%E6%96%87%E6%A1%A3.html" title="" target="_blank" rel="external">https://luoye7121.github.io/plugin/un-app微信小程序商城API文档.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">LT</span><small class="ml-1x">前端研发</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg1.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg1.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
